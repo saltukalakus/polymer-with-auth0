@@ -19,18 +19,18 @@ How to add Auth0 [Lock](https://auth0.com/docs/libraries/lock) authentication to
 1. Sign up for a [free Auth0 account](https://auth0.com/signup).
 2. In your **Auth0 Dashboard**, [create a new client](https://manage.auth0.com/#/clients/create).
 3. Name your new app and select "Single Page Web Applications".
-4. In the **Settings** section for your newly created app, add `http://localhost:8080` to the Allowed Callback URLs and Allowed Logout URLs.
+4. In the **Settings** section for your newly created app, add `https://localhost:8081` to the Allowed Callback URLs and Allowed Logout URLs.
 5. Open the `/src/my-app.html` file and replace the following with your app domain and client ID (found in **Settings** for your Auth0 app):
 ```
 <auth0-login 
 	client-id="[YOUR_CLIENT_ID]" 
 	domain="[YOUR_DOMAIN].auth0.com" 
-	redirect-url="http://localhost:8080"></auth0-login>
+	redirect-url="https://localhost:8081"></auth0-login>
 ```
 
 ## Serve
 
-Serve the Polymer project from the project folder: `polymer serve` (can be accessed in browser at [http://localhost:8080](http://localhost:8080), or add the `--open` flag to auto-launch in your default browser)
+Serve the Polymer project from the project folder: `polymer serve -P https/1.1` (can be accessed in browser at [https://localhost:8081](https://localhost:8081), or add the `--open` flag to auto-launch in your default browser)
 
 ## What is Auth0?
 
